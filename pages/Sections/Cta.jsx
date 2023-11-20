@@ -28,7 +28,7 @@ const Cta = () => {
     return (
 
         <div className=" mt-[200px] relative mx-auto items-center ">
-            <Toaster />
+            {sendEmail ? <Toaster /> : null}
             <div className="absolute  w-full h-28 mx-auto">
                 <div className="bg-gradient-to-r bg-opacity-20 from-pink-500/50 blur-3xl via-purple-500/50 to-pink-500/50 w-full h-full mx-auto">
 
