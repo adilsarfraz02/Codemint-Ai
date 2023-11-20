@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0px;
+  padding: 0;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+  .toast{
+    background : #0c0a0a!important;
+    color: rgb(210, 210, 210)!important;
+  }
+  
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)) no-repeat;
+    
+}
+
+.toast{
+  background :rgb(210, 210, 210)!important;
+  color: #0c0a0a!important;
+}
+
+@keyframes round{
+  0%{
+    transform:  translateY(0px);
+  }
+  70%{
+    transform:  translatex(-200px);
+  }
+  100%{
+    transform: translatex(0px);
+  }
+}
+
+::selection{
+  background:#e93fff ;
+  color: #f5f5f5;
+}
+.imgage{
+  display: block;
+  -webkit-user-select:none;
+  margin: auto;
+  transition: background-color 300ms;
+}
+.bg{
+  width: 40%;
+  height: 50vh;
+  filter: blur(150px);
+}
+.btn-shdow{
+  box-shadow:4px 4px 1.2em rgba(143, 15, 182, 0.329);
+}
+/* scrollbar Styling */
+body::-webkit-scrollbar {
+  width: .6rem !important; /* Width of the entire scrollable area */
+  margin:20px 20px;  
+}
+/* Track */
+body::-webkit-scrollbar-track {
+  margin:2px 0;   
+  padding: 12px;
+  background: transparent;
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  border-radius:.5rem!important;
+  background: #2c2b2c;
+  margin: 4px;
+}
+::-webkit-scrollbar-track-piece{
+  padding: 2px;
+  margin: 4px 4px;
+}
+
+/* Scroll animation */
+
+@keyframes reveal {
+	from {
+    scale: 1;
+
+    }
+    to   {
+      scale: 1.2;
+ 
+      
+    }
+}
+
+#sticky{
+	animation: linear reveal both;
+	animation-timeline: scroll();
+  animation-range: entry 25% contain 40%;
+  view-timeline-name: --revealing-image;
+	view-timeline-axis: block;
+  animation-timeline: --revealing-image;
+  transition:  reveal 1s;
+  z-index: inherit;
+  animation-delay: 150ms;
+  z-index: 1000;
+}
+
+#hero-h1 {
+  animation: scale-up linear both;
+  animation-timeline: view(block);
+  animation-range: entry 0 cover 100;
+
+}
+
+@keyframes scale-up {
+  from {
+    scale: .3;
+    }
+    to   {
+      scale: 1.5;
+    }
+}
+/* .banner{
+  z-index: -100;
+}
+.z-99{
+  z-index: -1000;
+} */
+
+.sidebar{
+  z-index: 1000;
+
+}
+
+.blurbg{
+  backdrop-filter: blur(28px);
+}
+
+.modes > *:hover{
+  color: rgb(168, 85, 247);
+  text-decoration: underline;
+  transition: .4s;
+}
+.modes > *:last-child{
+  color: rgb(168, 85, 247);
+}
+.btnsingle:hover{
+  color:#fff !important ;
+  background:rgb(168, 85, 247) !important;
+}
+.dash-links{
+  margin-top: 40px;
+  gap: 8px;
+  display: grid;
+  font-size: medium;
+}
+.dash-links > *{
+  text-align: center;
+  padding: 15px 0px;
+  border-radius: 23px;
+  width: 100%;
+  
+  transition: .6s;
+}
+.dash-links > *:hover{
+  background: #a855f7;
+}
+.blob-form{
+  background: linear-gradient(90deg, #54015f,#dc08f8);
+  background-clip: content-box;
+  animation: rotatecircle 30s infinite both;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes rotatecircle {
+  0% {
+    transform:rotate(-1turn);}
+    /*    filter: hue-rotate(1turn);*/
+    100% {transform:rotate(1turn)}
+    }
+
+    .custom-loader {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 16px solid #0000;
+      border-right-color: #C312B297;
+      position: relative;
+      animation: s4 2s infinite linear;
+    }
+    .custom-loader:before,
+    .custom-loader:after {
+      content: "";
+      position: absolute;
+      inset:-16px;
+      border-radius: 50%;
+      border:inherit;
+      animation:inherit;
+      animation-duration: 4s;
+    }
+    .custom-loader:after {
+      animation-duration: 8s;
+    }
+    
+    @keyframes s4 {
+      100% {transform: rotate(1turn)}
+    }
