@@ -61,7 +61,7 @@ const login = () => {
     )
   }
   else{
-    router.push("/")
+    router.push("/admin")
     return(
       <div className='min-h-screen text-4xl -translate-y-1/2 text-center mx-auto'>
         You Are Login in 🤷‍♀️

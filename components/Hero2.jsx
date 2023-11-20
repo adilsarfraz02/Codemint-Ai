@@ -3,10 +3,12 @@ import React ,{useEffect,useRef} from 'react'
 import Link from "next/link"
 import AboutSection from '../pages/Sections/AboutSec';
 import Cta from '../pages/Sections/Cta';
+import { useSession } from 'next-auth/react';
 
 const AboutSec = () => {
 
   const exampleDiv = useRef(null);
+  const {data: session} = useSession();
 
   return (
     <div className=''>
@@ -21,7 +23,7 @@ const AboutSec = () => {
       {/* about Website*/}
       <section className='h-auto '>
         <h3 className='text-center my-12'>
-          <Link href="/tools/chatGPT">
+          <Link href={session ? "/tools/chatGPT" : '/userNot'}>
           <span className='px-5 py-2 border-2 rounded-full border-gray-500/30 hover:border-gray-500/50 transition-colors'>Big Codemint ChatGPT Updates Released! 🎉</span>
           </Link>
         </h3>

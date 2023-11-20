@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import {Card, CardBody, Image, CardFooter} from "@nextui-org/react";
+import { useSession } from 'next-auth/react';
+
 
 const dataTools = [
     {
@@ -21,19 +23,20 @@ const dataTools = [
 ]
 
 function ToolsSec() {
+    const {data : session} = useSession();
     return (
         <main className='py-12'>
             <h1 className="text-center text-5xl text-transparent bg-clip-text 
-        bg-gradient-to-bl font-bold from-pink-500 to-violet-500">
+                            bg-gradient-to-bl font-bold from-pink-500 to-violet-500">
                 Our Tools
             </h1>
             <div className="grid grid-cols-3 py-12 max-md:grid-cols-2 gap-6 px-4 max-sm:grid-cols-1 w-full h-auto">
                 {dataTools.map((item, index) => (
-                    <Link href={item.link} className='bg-zinc-400/10 rounded-xl hover:text-purple-500 transition' key={index}>
+                    <Link href={session ? item.link : '/userNot' } className='bg-zinc-400/10 rounded-xl hover:text-purple-500 transition' key={index}>
                         <Card className="py-4">
                             
                             <CardBody className="overflow-visible py-2">
-                                <Image
+                                <img
                                     alt={item.title}
                                     className="object-cover h-[280px] rounded-xl w-[460px]"
                                     src={item.img}

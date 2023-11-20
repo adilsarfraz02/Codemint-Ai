@@ -52,7 +52,7 @@ export default function DropDown() {
             <Menu.Item>
               {({ active }) => (
                 <Link
-                  href="/"
+                  href="/admin"
                   className={classNames(
                     active ? 'bg-gray-300 backdrop-blur-2xl shadow-md text-pink-500/80' : '',
                     'grid grid-cols-1 transition-colors gap-1 px-2 py-2 w-full rounded-md'
@@ -65,13 +65,13 @@ export default function DropDown() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="#"
-                  className={classNames(
-                    active ? 'bg-gray-300 backdrop-blur-2xl shadow-md text-pink-500/80' : '',
+                onClick={() => signOut()}
+                className={ classNames(
+                    active ? 'bg-red-200 backdrop-blur-2xl shadow-md cursor-pointer text-red-500' : '',
                     'grid grid-cols-1 transition-colors gap-1 px-2 py-2 w-full rounded-md'
                   )}
                 >
-                    <span className="flex gap-1 items-center"><IoCog className='text-center text-3xl'/> Settings</span>
+                    <span className="flex gap-1 items-center"><IoCog className='text-center text-3xl'/> Logout</span>
                 </a>
               )}
             </Menu.Item>  

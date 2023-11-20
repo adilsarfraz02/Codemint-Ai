@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { tools } from './api/Tools/ToolsPage'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const Tools = () => {  
+  const { data: session } = useSession()
   return (
     <>
       <Header/>
@@ -22,7 +24,7 @@ const Tools = () => {
         <div id='tools' className="grid  grid-cols-3 mt-20 gap-8 max-sm:px-12 mx-auto px-32 max-md:grid-cols-2 max-sm:grid-cols-1">
           {tools.map((tool) => (
             <>
-             <Link href={tool.link} className=' overflow-hidden shadow-2xl block relative inc-800/80 rounded-3xl'>
+             <Link href={session ? tool.link : '/userNot'} className=' overflow-hidden shadow-2xl block relative inc-800/80 rounded-3xl'>
              <img
                 src={tool.video}
                 loop='true'
