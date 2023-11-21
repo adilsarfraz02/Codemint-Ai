@@ -61,11 +61,12 @@ import DropDown from './DropDown';
              </div>:
               (
                 <>
-                <Link href="/login" className='mr-5 max-sm:hidden bg-gradient-to-l active:bg-violet-700 opacity-75 hover:opacity-100 backdrop-blur-2xl from-pink-500 to-purple-500 p-[2px] max-sm:mt-2 rounded-full text-white'>
+                <Link href="/login" className='mr-5  bg-gradient-to-l active:bg-violet-700 opacity-75 hover:opacity-100 backdrop-blur-2xl from-pink-500 to-purple-500 p-[2px] max-sm:mt-2 rounded-full text-white'>
                 <div className="w-full px-5 py-2 rounded-full items-center justify-center ">
                   SignIn
                 </div>
               </Link>
+                <Sidebar/>
               </>
               )
              }
