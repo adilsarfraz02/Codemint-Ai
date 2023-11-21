@@ -53,12 +53,12 @@ const TextToSpeechConverter = () => {
       <Head>
         <title>Text to Speech | Codemintai</title>
       </Head>
-      <Link href="/tools" className="bg-zinc-400 dark:bg-zinc-700/50 absolute mt-5 ml-5 w-fit px-4 py-2 rounded-3xl hover:opacity-80 transition-all">
+      <Link href="/tools" className="bg-zinc-400 max-md:relative max-md:m-2 dark:bg-zinc-700/50 absolute mt-5 ml-5 w-fit px-4 py-2 rounded-3xl hover:opacity-80 transition-all">
         &lt; Go back
       </Link>
       <h1 className="text-3xl font-bold text-gray-400 text-center mb-4">Text to Speech Converter 😍</h1>
       <div className="shadow-lg rounded-lg p-2 dark:bg-black/50">
-        <div className="mx-auto w-full flex  max-sm:my-2 max-sm:h-[25.7rem]  my-4">
+        <div className="mx-auto w-full flex  max-sm:my-2 max-sm:h-[15rem]  my-4">
         {loading &&(
           <div className='text-4xl text-center transition-all mx-auto w-full grid place-content-center'><div class="custom-loader"/></div>
         )}  
@@ -76,23 +76,24 @@ const TextToSpeechConverter = () => {
           </div>
         )}
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-3 max-md:flex-col">
           <input
             type="text"
             id="text"
             value={text} placeholder='Enter Text to Genrate Speech'
             onChange={(e) => setText(e.target.value)}
-            className="w-full py-4 px-4 text-black border-4 focus:outline-none focus:border-purple-500 placeholder:text-black text-lg  rounded-full"
+            className="w-full py-4 px-4 max-md:py-3 text-black border-4 focus:outline-none focus:border-purple-500 placeholder:text-black text-lg  rounded-full"
           />
           <button
           onClick={convertToSpeech}
-          className={`dark:bg-gray-50 bg-black text-xl focus:outline-purple-500 
+          className={`dark:bg-gray-50 max-sm:py-2 bg-black text-xl focus:outline-purple-500 
           bg-gradient-to-t from-purple-500 to-pink-500 hover:bg-pink-500 text-white dark:text-black px-8 rounded-full cursor-pointer `}
         >
         {loading ? (<RiLoader2Fill className={loading ? 'animate-spin' : ''}/>) : ('Convert')}
         </button>
-        </div>
-          <label htmlFor="lang" className='p-2'>Select Language:</label>
+        </div >
+         <div className="items-center flex max-md:flex-col">
+         <label htmlFor="lang" className='p-2'>Select Language:</label>
           <select
             id="lang"
             value={lang}
@@ -102,8 +103,8 @@ const TextToSpeechConverter = () => {
             <option value="en">English</option>
             <option value="ur">Urdu</option>
           </select>
-    &nbsp;
-          <label htmlFor="speed">Speed: </label>
+            <br className='max-md:block hidden'/>
+          <label htmlFor="speed" className=''>&nbsp; Speed: </label>
           <select
             id="speed"
             value={speed}
@@ -114,6 +115,7 @@ const TextToSpeechConverter = () => {
             <option value="slow">{lang === 'ur' ? 'سست': 'Slow'}</option>
             <option value="fast">{lang === 'ur' ? 'تیز': 'Fast'}</option>
           </select>
+         </div>
         
       </div>
     </div>

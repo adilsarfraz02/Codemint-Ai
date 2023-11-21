@@ -17,11 +17,11 @@ const Tools = () => {
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <section className="">
-        <h1 className="text-center text-5xl my-5 mt-12">
+        <h1 className="text-center text-5xl max-md:text-3xl my-5 mt-12">
           CREATE STUNNING VISUALS
           <span className='text-orange-500'> IN SECONDS</span>
         </h1>
-        <div id='tools' className="grid  grid-cols-3 mt-20 gap-8 max-sm:px-12 mx-auto px-32 max-md:grid-cols-2 max-sm:grid-cols-1">
+        <div id='tools' className="grid  grid-cols-3 mt-20 gap-8 max-sm:px-4 mx-auto px-32 max-md:grid-cols-2 max-sm:grid-cols-1">
           {tools.map((tool) => (
             <>
              <Link href={session ? tool.link : '/userNot'} className=' overflow-hidden shadow-2xl block relative inc-800/80 rounded-3xl'>

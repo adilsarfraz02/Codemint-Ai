@@ -144,8 +144,7 @@ body::-webkit-scrollbar-thumb {
 } */
 
 .sidebar{
-  z-index: 1000;
-
+background-color: #000000 !important;
 }
 
 .blurbg{
@@ -220,3 +219,4 @@ body::-webkit-scrollbar-thumb {
     @keyframes s4 {
       100% {transform: rotate(1turn)}
     }
+    

@@ -26,19 +26,19 @@ const login = () => {
         <Head>
           <title>Signin 🤞- Codemint Ai</title>
         </Head> 
-        <Link href="/" className='bg-zinc-700/10 hover:bg-zinc-500 transition-all px-4 py-2 rounded-3xl'>{back}</Link>
+        <Link href="/" className='bg-zinc-500/30 hover:bg-zinc-500 transition-all px-4 py-2 rounded-3xl'>{back}</Link>
   
-        <div className="h-[25rem] rounded-3xl ronded-xl bg-white/5 backdrop-blur-3xl max-md:w-[60%] max-xl:w-[60%] w-[30%] max-sm:w-[80%] mx-auto translate-y-1/3 ring-1 dark:ring-white/20 ring-black/20">
-              <div className='max-sm:ml-0 py-5'>
+        <div className="h-[25rem] max-md:h-auto rounded-3xl ronded-xl bg-white/5 backdrop-blur-3xl max-md:w-[100%] py-5  max-xl:w-[60%] w-[30%] mx-auto translate-y-1/3 ring-1 dark:ring-white/20 ring-black/20">
+              <div className='max-sm:ml-0 py-2'>
                 <Link href="/" title='CodeMint' className="flex text-center justify-center"> 
-                <img src="/img/logo.png" width={50} className='mt-3 invert dark:invert-0 object-cover' alt="" />
-                  <span className="text-3xl mt-[21px]  bg-gradient-to-l from-pink-500 to-purple-500 font-bold bg-clip-text text-transparent">
+                <img src="/img/logo.png" width={50} className='mt-1 invert dark:invert-0 object-cover' alt="" />
+                  <span className="text-3xl mt-[12px]  bg-gradient-to-l from-pink-500 to-purple-500 font-bold bg-clip-text text-transparent">
                     mint Ai
                   </span>
                 </Link>
               </div>
               <h1 className="text-center text-2xl font-bold dark:text-white text-transparent bg-clip-text bg-gradient-to-br from-slate-900 to-zinc-800">Login or signup</h1>
-              <div className="mt-6 px-12">
+              <div className="mt-6 max-md:px-3 px-12">
             <button onClick={() => { signIn('google'); setGloading(true) }} className={`w-full text-center dark:bg-white dark:text-black bg-black text-white  transition py-3 rounded-3xl flex justify-center items-center gap-1 text-base hover:opacity-75 ${Gloading ? 'opacity-30 cursor-not-allowed hover:opacity-30' : ''}`}>
               {Gloading ? <TfiReload className="animate-spin" /> : <FcGoogle className='text-2xl' /> }Continue with Google </button>
                 <div  className="flex my-5 justify-between">

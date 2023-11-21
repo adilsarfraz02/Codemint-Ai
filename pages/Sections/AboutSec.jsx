@@ -8,7 +8,7 @@ const AboutSection = () => {
     <ToolsSec />
       <h1 className="text-center mt-20 mb-8 text-5xl font-sans text-purple-500 font-bold ">Top Feedback</h1>
 
-      <div className="flex  flex-col items-center w-full gap-6 px-12 md:flex-row md:mb-0 flex-between">
+      <div className="flex  flex-col items-center w-full gap-6 px-12 md:flex-row md:mb-0 flex-between max-md:px-3">
         <div className="shadow-2xl shadow-gray-50/10 border border-gray-200/10 hover:-translate-y-4 delay-150 transition-all mx-auto rounded-xl p-4 py-12 px-4">
           <p className="text-gray-600 items-center text-xl dark:text-white">
             <span className="text-2xl font-mono font-bold text-indigo-500">

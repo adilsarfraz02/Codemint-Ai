@@ -23,7 +23,7 @@ const About = () => {
           </div>
         </>
         {/* Started Section */}
-        <div className="w-full px-28 text-lg mt-5 flex max-md:block max-sm:px-7 h-auto">
+        <div className="w-full ax-md:text-center px-28 text-lg mt-5 flex max-md:block max-sm:px-7 h-auto">
           <div className="w-1/2 pr-3 max-md:w-full">
             <h1 className="font-semibold tracking-wide py-3 first-letter:text-3xl">
             <span className='text-purple-500 font-bold'>Codemint AI</span> was born from a shared passion for harnessing the power of artificial intelligence to drive innovation and solve complex 
@@ -53,11 +53,11 @@ const About = () => {
             <h1 className='pt-15 mt-20 bg-clip-text bg-gradient-to-tr from-pink-500 float-right to-purple-500 text-transparent text-center'>,,</h1>
           </div>
 
-            <div className="w-[60%]">
+            <div className="w-[60%] max-md:w-[85%]">
             <h1 className="text-5xl font-bold text-center pt-20 mission">
             Our  Mission
             </h1>
-              <p className="text-center text-2xl p-1 font-semibold">
+              <p className="text-center max-md:text-lg text-2xl p-1 font-semibold">
                 To provide a platform where&nbsp;
                 <span className="text-transparent bg-gradient-to-tr from-purple-500 to-pink-500 bg-clip-text">developers can learn</span> new technologies.
               </p>
@@ -67,7 +67,7 @@ const About = () => {
             </div>
         </div>
         {/* Join Us */}
-        <div className="flex my-12">
+        <div className="flex my-12 max-md:mb-24">
           <div className="w-[80%] flex mx-auto h-[250px] bg-gradient-to-tr dark:from-purple-500 dark:via-pink-500 dark:to-purple-500 from-pink-500/80 via-purple-500/20 to-pink-500/50  backdrop-blur-3xl drop-shadow-xl rounded-2xl">
             <div className="w-[10%] h-full left"></div> 
             <div className="w-[80%] h-full text-center font-bold text-xl">

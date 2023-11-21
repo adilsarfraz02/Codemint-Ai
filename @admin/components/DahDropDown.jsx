@@ -37,12 +37,11 @@ export default function DashDrop() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute left-0 z-10 ml-32 -mt-48 w-60 origin-top-right rounded-md bg-white/80 dark:bg-black/80 backdrop-blur-xl blurbg shadow-lg ring-1 ring-black dark:ring-white/10 ring-opacity-10 focus:outline-none">
+        <Menu.Items className="absolute max-md:ml-0 left-0 z-10 ml-32 -mt-48 w-60 origin-top-right rounded-md bg-white/80 dark:bg-black/80 backdrop-blur-xl blurbg shadow-lg ring-1 ring-black dark:ring-white/10 ring-opacity-10 focus:outline-none">
           <div className="py-2 gap-5 block px-2">
             <Menu.Item>
               {({ active }) => (
                 <div
-                  href="#"
                   className={classNames(
                     active ? 'bg-gray-300 backdrop-blur-2xl shadow-md text-pink-500/80' : '',
                     'grid grid-cols-1 transition-colors gap-1 px-2 py-2 w-full rounded-md'

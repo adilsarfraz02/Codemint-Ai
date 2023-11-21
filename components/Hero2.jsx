@@ -22,16 +22,16 @@ const AboutSec = () => {
       </section>
       {/* about Website*/}
       <section className='h-auto '>
-        <h3 className='text-center my-12'>
+        <h3 className='text-center my-12 px-2 flex items-center justify-center'>
           <Link href={session ? "/tools/chatGPT" : '/userNot'}>
-          <span className='px-5 py-2 border-2 rounded-full border-gray-500/30 hover:border-gray-500/50 transition-colors'>Big Codemint ChatGPT Updates Released! 🎉</span>
+          <span className='px-3 py-2 border-2 text-center flex flex-wrap  w-fit rounded-full border-gray-500/30 hover:border-gray-500/50 transition-colors'>Big Codemint ChatGPT Updates Released! 🎉</span>
           </Link>
         </h3>
         <div className="pt-12 max-md:pt-5">
-          <h2 className="text-center text-3xl font-bold dark:text-[#bbb] text-black">
+          <h2 className="text-center max-sm:text-xl px-2 text-3xl font-bold dark:text-[#bbb] text-black">
             Code Snippets. Screenshots. Workflow Context.
           </h2>
-          <h1  className="max-sm:text-6xl text-7xl my-2 font-extrabold text-center">
+          <h1  className="max-sm:text-5xl text-7xl my-2 font-extrabold text-center">
             Redefine Atomic Productivity.
           </h1>
           <p className="text-xl mx-48 max-md:mx-3 my-4 text-center">

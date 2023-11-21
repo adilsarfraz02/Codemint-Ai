@@ -43,7 +43,7 @@ const Chatbot = () => {
   const back = '< Go back'
   return (
     <div className=" min-h-screen p-4 flex flex-col justify-between">
-      <Link href="/" className='dark:bg-zinc-700/50 bg-zinc-400 absolute mt-5 ml-5 hover:opacity-80 transition-all w-fit px-4 py-2 rounded-3xl'>{back}</Link>
+      <Link href="/tools" className='dark:bg-zinc-500/50 max-sm:my-1 max-sm:mx-1 max-md:relative bg-zinc-400 absolute mt-5 ml-5 hover:opacity-80 transition-all w-fit px-4 py-2 rounded-3xl'>{back}</Link>
     <Head>
     <title>ChatGPT | Codemintai</title>
     </Head>

@@ -6,7 +6,7 @@ const Dashboard = () => {
     toast.success('No notification 🤞')
   }
   return (
-    <div className='w-[75%] h-[94vh] border-dashed border-[3px] dark:border-zinc-50/20 bg-zinc-500/10 border-black/50 rounded-3xl p-4'>
+    <div className='w-[75%] max-md:hidden block h-[94vh] border-dashed border-[3px] dark:border-zinc-50/20 bg-zinc-500/10 border-black/50 rounded-3xl p-4'>
       <div className="w-full mt-2 items-center justify-between flex text-xl px-4 rounded-3xl h-28 dark:bg-black/50 bg-zinc-500/10 ">
         <h1 className="text-pink-500 font-semibold">Dashboard</h1>
           <div onClick={notification} className='relative hover:bg-red-500 p-1 hover:cursor-pointer rounded-full'>

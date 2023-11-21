@@ -17,8 +17,8 @@ export default function DropDown() {
 
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-full focus-within:ring-4 bg-gray-200 focus-within:ring-purple-500">
+      <div className=''>
+        <Menu.Button className="inline-flex w-full  justify-center rounded-full focus-within:ring-4 bg-gray-200 focus-within:ring-purple-500">
                   <img src={session.user.image} width={52} height={52} className='rounded-full' alt="user"
                       title={session.user.name} />
         </Menu.Button>

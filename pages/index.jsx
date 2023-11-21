@@ -2,7 +2,6 @@
 import { useSession } from 'next-auth/react';
 import AboutSec from '../components/Hero2';
 import Head from 'next/head';
-import Admin from '../@admin/Admin'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 

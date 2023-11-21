@@ -19,6 +19,7 @@
     "@heroicons/react": "^2.0.18",
     "@nextui-org/react": "^2.1.10",
     "@radix-ui/react-navigation-menu": "^1.1.4",
+    "antd": "^5.11.2",
     "aos": "^2.3.4",
     "audiobuffer-to-wav": "^1.0.0",
     "aws-sdk": "^2.1472.0",

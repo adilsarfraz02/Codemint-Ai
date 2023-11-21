@@ -13,9 +13,9 @@ const Admin = () => {
       <Head>
         <title>Admin ✨| Codemint</title>
       </Head>
-        <section className="min-h-full px-14 py-5 w-full flex gap-6">
+        <section className="min-h-full max-md:px-4 px-14 py-5 w-full flex gap-6 max-md:flex-col h-auto">
           <Sidebar />
-          <Dashboard />
+          <Dashboard className="max-md:hidden"/>
         </section>
     </div>
   )

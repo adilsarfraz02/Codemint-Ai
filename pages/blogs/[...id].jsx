@@ -66,7 +66,7 @@ const BlogPost = () => {
            <div className='flex gap-2 my-5 justify-between'>
             <div className="font-bold"><span className="text-purple-500">Posted on: </span>{post.date}</div> 
             <div className="">
-              <Link className='bg-gradient-to-tr from-purple-500 to-pink-500 px-4 py-3 rounded-2xl hover:bg-purple-500 btnsingle' href={post.pageUrl}>{post.btn}</Link>
+              <Link className='bg-gradient-to-tr flex flex-wrap h-auto text-center w-fit from-purple-500 to-pink-500 px-4 py-3 rounded-2xl hover:bg-purple-500 btnsingle' href={post.pageUrl}>{post.btn}</Link>
             </div>
             </div>
             <div className="text-lg mt-4">
