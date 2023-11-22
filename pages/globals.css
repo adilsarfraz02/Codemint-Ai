@@ -143,9 +143,6 @@ body::-webkit-scrollbar-thumb {
   z-index: -1000;
 } */
 
-.sidebar{
-background-color: #000000 !important;
-}
 
 .blurbg{
   backdrop-filter: blur(28px);
