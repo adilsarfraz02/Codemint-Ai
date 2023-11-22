@@ -19,7 +19,7 @@ import DropDown from './DropDown';
     <>
       {/* <div className='bg overflow-hidden -z-10 right-0 fixed bg-gradient-to-t from-purple-500 via-purple-500 to-blue-800 rounded-full'></div> */}
       
-        <nav className='flex sidebar border-b dark:border-gray-200/20 border-zinc-600/40 max-md:px-5 max-sm:px-7 justify-between max-sm:gap-12 py-5 max-md:py-2 px-12 backdrop-blur-md '>
+        <nav className='flex sidebar border-b bg-white dark:bg-black dark:border-gray-200/20 border-zinc-600/40 max-md:px-5 max-sm:px-7 justify-between max-sm:gap-12 py-5 max-md:py-2 px-12 backdrop-blur-md '>
             <div className='max-sm:ml-0'>
               <Link href="/" title='CodeMint' className="flex mt-2 text-center justify-center"> 
             
