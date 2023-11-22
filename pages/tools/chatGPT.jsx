@@ -51,14 +51,14 @@ const Chatbot = () => {
       <h1 className="text-center text-3xl font-bold text-gray-400"> <span>Codemint ChatGPT ✨</span></h1>
        <div className="">
   
-        <div className="h-[28rem] mb-12 overflow-y-auto grid max-sm:my-2 max-sm:h-[25.7rem] mx-36 my-4">
+        <div className="h-[28rem] mb-12 overflow-y-auto grid max-sm:m-0 max-sm:mx-0 max-sm:w-full max-sm:h-[25.7rem]  mx-36 my-4">
           {isLoading && 
           <div className='text-4xl text-center transition-all mx-auto w-full grid place-content-center'><div class="custom-loader"/></div>}          {messages.map((message, index) => (
                 <div key={index} className={`flex items-center gap-2 text-lg px-3 py-2  h-fit rounded-xl w-fit ${message.sender === 'user' ? 'font-sans bg-gray-200 mb-5 pt-3 text-black' : 'text-left bg-pink-500 '}`}>
                     <span className="text-black/70 font-semibold text-xl">
                         {message.sender === 'user' ? <FiUser className='text-xl text-white w-auto h-auto bg-pink-500 p-3 rounded-full '/>: ' ChatGPT : '}
                     </span>
-                <pre className='font-sans transition-all'> {message.text}</pre>
+                <pre className='font-sans flex flex-wrap w-full h-auto transition-all'> {message.text}</pre>
                 </div>
             ))}
         </div>

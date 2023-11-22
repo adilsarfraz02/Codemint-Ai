@@ -20,14 +20,14 @@ const Sidebar = () => {
   };
 
   return (
-    <main className='md:hidden sidebar text-center flex items-center delay-100 bg-black transition'>
+    <main className='md:hidden sidebar dark:bg-black text-center flex items-center delay-100 transition'>
       <RiMenu4Fill onClick={showDrawer}
         className='text-3xl hover:text-pink-500/50 text-center mt-5 max-md:mt-1 cursor-pointer flex items-center' />
 
       {/* Sidebar */}
-      <Drawer className={` w-full sidebar`} title="" placement="right" onClose={onClose} open={open}>
+      <Drawer className={` w-full sidebar side`} title="" placement="right" onClose={onClose} open={open}>
         <FaTimes onClick={() => setOpen(false)}
-          className=' dark:text-white text-black text-3xl absolute top-5 bg-gray-50/20 p-2 rounded-full hover:text-red-500/50 hover:bg-pink-500/10' />
+          className=' dark:text-white bg-white dark:bg-red-500 text-black text-3xl absolute top-3 bg-gray-50/20 p-2 rounded-full hover:text-black cursor-pointer hover:bg-pink-500' />
         <Link href="/" title='CodeMint' className="flex text-center justify-center">
 
           <img src="/img/logo.png" width={50} className='mt-3 dark:invert-0 invert object-cover' alt="" />
@@ -76,7 +76,7 @@ const Sidebar = () => {
                 </span>
               </p> :
                 <Link href='/login'>
-                  <div className="w-full px-5 py-2 rounded-full items-center justify-center ">
+                  <div className="w-full px-5  rounded-full items-center justify-center ">
                     {session ? 'Logout' : 'Signup'}
                   </div>
                 </Link>}
