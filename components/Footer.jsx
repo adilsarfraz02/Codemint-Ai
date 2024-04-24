@@ -2,6 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
 <footer className="text-gray-600 body-font">
   <div className="container px-12 py-8 mx-auto flex items-center sm:flex-row flex-col">
@@ -16,7 +18,8 @@ const Footer = () => {
             </span>
               </Link>    
             </div>
-    <p className="text-sm text-zinc-500 dark:text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200/50 sm:py-2 sm:mt-0 mt-4">© 2023 CodeMintai —
+    <p className="text-sm text-zinc-500 dark:text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200/50 sm:py-2 sm:mt-0 mt-4">© 
+      {currentYear} CodeMintai —
       <a href="https://www.facebook.com/profile.php?id=100014757152336" className="text-zinc-900 dark:text-gray-400 ml-1" rel="noopener noreferrer" target="_blank">@ADil Sarfraz</a>
     </p>
     <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-3">
